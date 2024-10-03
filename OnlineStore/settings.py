@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'checkout.apps.CheckoutConfig',
     'users.apps.UsersConfig',
+    'chat.apps.ChatConfig',
     'taggit',
 ]
 
@@ -138,7 +139,3 @@ LOGIN_REDIRECT_URL = 'store:home'
 # Email
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
-
-# Telegram
-TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
-TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
