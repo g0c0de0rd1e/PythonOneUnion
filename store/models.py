@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from taggit.managers import TaggableManager
 from taggit.models import GenericTaggedItemBase, TagBase
+from django.contrib.auth.models import User
 
 
 class ItemTag(TagBase):
@@ -67,3 +68,4 @@ class Item(models.Model):
         ordering = ['-price']
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
+        

@@ -82,6 +82,8 @@ class OrderItem(models.Model):
 
 
 class ShippingAddress(models.Model):
+    quantity = models.PositiveIntegerField(
+        default=1, verbose_name='Количество',)
     first_name = models.CharField(max_length=50, verbose_name='Имя',)
     last_name = models.CharField(max_length=50, verbose_name='Фамилия',)
     email = models.EmailField(verbose_name='Почта',)
